@@ -1,0 +1,30 @@
+<div class="container">
+    <h2>Agregar Habilidad</h2>
+    <div class="row">
+        <div>
+            <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+                <div class="form-group">
+                    <label for="percent">Porcentaje</label>
+                    <input type="text" class="form-control" id="percent" name="percent" [(ngModel)]="percent" required>
+                </div>
+                <div class="form-group">
+                    <label for="title">Habilidad</label>
+                    <input type="text" class="form-control" id="title" name="title" [(ngModel)]="title" required>
+                </div>
+                <br>
+                <div class="d-flex justify-content-start">
+                    <div>
+                        <button class="btn btn-primary">
+                            Agregar Habilidad
+                        </button>
+                    </div>
+                    <div>
+                        <a class="btn btn-primary" href="https://frontendtorres.web.app/">
+                            Cancelar
+                        </a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

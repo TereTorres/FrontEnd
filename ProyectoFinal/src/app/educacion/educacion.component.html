@@ -1,0 +1,39 @@
+<div class="row">
+ 
+    <h2 class="titulo d-flex justify-content-center col-lg-12">Educación</h2>
+  
+    <div class="col-lg-12">
+        <button class="btn btn-primary btn-lg" style="padding-left: 2.5rem; padding-right: 2.5rem;" type="button"
+            routerLink="/nuevonivel" *ngIf="isLogged">
+            Nuevo Nivel
+        </button>
+    </div>
+    <div>
+        <ul *ngFor="let Educacion of edu">
+            <div class="p-2 flex-grow-1">
+                <li type="square">
+                    <div class="d-flex">
+                        <h3>{{Educacion.nivel}}</h3>
+                        <div class="p-2" *ngIf="isLogged">
+                            <button class="btn btn-sec" routerLink="/editarnivel/{{Educacion.id_Educacion}}">
+                                <abbr title="Editar"><i class="bi bi-vector-pen"></i></abbr>
+                            </button>
+                        </div>
+                        <div class="p-2" *ngIf="isLogged">
+                            <button class="btn btn-sec" (click)="mostrarDialogo(Educacion.id_Educacion)">
+                                <abbr title="Eliminar"><i class="bi bi-trash3-fill"></i></abbr>
+                            </button>
+                        </div>
+                    </div>
+                    <h4>Institución: </h4>
+                    <p>{{Educacion.institucion}}</p>
+                    <br>
+                    <h4>Título: </h4>
+                    <p>{{Educacion.titulo}}</p>
+                </li>
+
+            </div>
+        </ul>
+
+    </div>
+</div>

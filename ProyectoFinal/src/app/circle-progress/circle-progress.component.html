@@ -1,0 +1,40 @@
+<div class="row">
+    
+    <h2 class="titulo d-flex justify-content-center col-lg-12">Hard & Soft Skills</h2>
+  
+    <div class="col-lg-12">
+        <button class="btn btn-primary btn-lg" style="padding-left: 2.5rem; padding-right: 2.5rem;" type="button"
+            routerLink="/nuevahys" *ngIf="isLogged">
+            Nueva Habilidad
+        </button>
+    </div>
+
+    <div class="row">
+        <ul *ngFor="let Hysskills of hys">
+            <div class="text-center col-xs-4 col-sm-3 col-md-3 col-xl-3 d-flex justify-content-center">
+                <li type="none">
+                    <div class="d-flex justify-content-start">
+                        <div>
+                            <circle-progress [percent]=Hysskills.percent [radius]="60" [outerStrokeWidth]="10"
+                                [title]="Hysskills.title" [showUnits]="false" [titleColor]="'#122e4d'"
+                                [titleFontSize]="'1em'" [showSubtitle]="false" [innerStrokeWidth]="8"
+                                [outerStrokeColor]="'#c204ec'" [innerStrokeColor]="'#d1a4db'" [animation]="true"
+                                [animationDuration]="300">
+                            </circle-progress>
+                        </div>
+                        <div class="p-2" *ngIf="isLogged">
+                            <button class="btn btn-sec" routerLink="/editarhys/{{Hysskills.id_Hys}}">
+                                <abbr title="Editar"><i class="bi bi-vector-pen"></i></abbr>
+                            </button>
+                        </div>
+                        <div class="p-2" *ngIf="isLogged">
+                            <button class="btn btn-sec" (click)="mostrarDialogo(Hysskills.id_Hys)">
+                                <abbr title="Eliminar"><i class="bi bi-trash3-fill"></i></abbr>
+                            </button>
+                        </div>
+                    </div>
+                </li>
+            </div>
+        </ul>
+    </div>
+</div>

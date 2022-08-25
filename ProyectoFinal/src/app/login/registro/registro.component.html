@@ -1,0 +1,42 @@
+<div class="container">
+    <h2>Registro</h2>
+    <div class="row">
+        <div>
+            <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+                <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="nombreUsuario">Nombre de Usuario</label>
+                    <input type="text" class="form-control" id="nombreUsuario" name="nombreUsuario" [(ngModel)]="nombreUsuario" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="text" class="form-control" id="email" name="email" [(ngModel)]="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" id="password" name="password" [(ngModel)]="password" required>
+                </div>
+                <div class="form-group">
+                    <label for="rol">El nuevo Usuario tendrá categoría user</label>
+                    
+                </div>
+                <br>
+                <div class="d-flex justify-content-start">
+                    <div>
+                        <button class="btn btn-primary">
+                            Agregar Usuario
+                        </button>
+                    </div>
+                    <div>
+                        <button class="btn btn-primary" routerLink="'login'">
+                            Cancelar
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

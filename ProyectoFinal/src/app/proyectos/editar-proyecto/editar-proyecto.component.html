@@ -1,0 +1,34 @@
+<div class="container" *ngIf="proyectos">
+    <h2>Editar Proyecto</h2>
+    <div class="row">
+        <div>
+            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                <div class="form-group">
+                    <label for="titulo">Título</label>
+                    <input type="text" class="form-control" id="titulo" name="titulo" [(ngModel)]="proyectos.titulo" required>
+                </div>
+                <div class="form-group">
+                    <label for="descripcion">Descripción</label>
+                    <input type="text" class="form-control" id="descripcion" name="descripcion" [(ngModel)]="proyectos.descripcion" required>
+                </div>
+                <div class="form-group">
+                    <label for="imagen">Dirección de la Imagen</label>
+                    <input type="text" class="form-control" id="imagen" name="imagen" [(ngModel)]="proyectos.imagen" required>
+                </div>
+                <br>
+                <div class="d-flex justify-content-start">
+                    <div>
+                        <button class="btn btn-primary">
+                            Guardar Cambios
+                        </button>
+                    </div>
+                    <div>
+                        <button class="btn btn-primary" routerLink="''">
+                            Cancelar
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

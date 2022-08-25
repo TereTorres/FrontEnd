@@ -1,0 +1,40 @@
+.row{
+    padding: 25px;
+   
+}
+.titulo{
+    background-color: teal;
+    padding: 20px;
+    color: azure;
+}
+h2{
+    font-family: 'Arial Narrow', Arial, sans-serif;
+}
+h3,h4,h5{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+ul{
+    margin-left: 50px;
+    margin-bottom: 30px;
+}
+h4,p{
+    display: inline;
+}
+.btn{
+    background-color: #a1b5cb;
+    border-color: #a1b5cb;
+    padding: 5px;
+}
+.btn-sec{
+    background-color: white;
+    border-color: white;
+}
+.bi{
+    color: #a1b5cb;
+}
+.bi-trash3-fill{
+    color: rgb(150, 19, 19);
+}
+.imagen{
+    text-align: center;
+}

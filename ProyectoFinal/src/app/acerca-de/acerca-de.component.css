@@ -1,0 +1,29 @@
+@font-face {
+    font-family: francisco;
+    src: url(../../assets/FranciscoDemo.ttf);
+}
+.nombre{
+    font-family:francisco;
+    font-size:400%;
+}
+.cargo{
+    font-family: 'Arial Narrow', Arial, sans-serif;
+    font-size: xx-large;
+    margin-top: -20px;
+}
+.texto{
+    font-family: 'Arial Narrow', Arial, sans-serif;
+
+}
+#imagen{
+    width: 30%;
+    padding: 0%;
+    box-shadow: 3px 3px 3px gray;
+}
+.bi{
+    color: #a1b5cb;
+}
+.btn-sec{
+    background-color: white;
+    border-color: white;
+}

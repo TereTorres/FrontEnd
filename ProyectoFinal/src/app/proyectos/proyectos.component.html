@@ -1,0 +1,40 @@
+<div class=" row">
+    <h2 class="titulo d-flex justify-content-center col-lg-12">Proyectos Realizados</h2>
+   
+    <div class="col-lg-12">
+        <button class="btn btn-primary btn-lg" style="padding-left: 2.5rem; padding-right: 2.5rem;" type="button"
+            routerLink="/nuevoproyecto" *ngIf="isLogged">
+            Nuevo Proyecto
+        </button>
+    </div>
+    <div>
+        <ul *ngFor="let Proyectos of proy">
+            <div class="p-2 flex-grow-1">
+                
+                <li type="square">
+                    <div class="d-flex">
+                        <h3>{{Proyectos.titulo}}</h3>
+                        <div class="p-2" *ngIf="isLogged">
+                            <button class="btn btn-sec" routerLink="/editarproyecto/{{Proyectos.id_Proyecto}}">
+                                <abbr title="Editar"><i class="bi bi-vector-pen"></i></abbr>
+                            </button>
+                        </div>
+                        <div class="p-2" *ngIf="isLogged">
+                            <button class="btn btn-sec" (click)="mostrarDialogo(Proyectos.id_Proyecto)">
+                                <abbr title="Eliminar"><i class="bi bi-trash3-fill"></i></abbr>
+                            </button>
+                        </div>
+                    </div>
+                    <p>{{Proyectos.descripcion}}</p>
+                    <br>
+                    <br>
+                    <div class="imagen">
+                    <img src="{{Proyectos.imagen}}" alt="{{Proyectos.titulo}}" width="50%" class="img-fluid img">
+                </div>
+                </li>
+
+            </div>
+        </ul>
+        
+    </div>
+</div>
